@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberSafe</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: white;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 700px;
+      padding: 30px 20px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .header p {
+      color: #aab3c5;
+    }
+
+    .chat {
+      background: #151c30;
+      border-radius: 18px;
+      padding: 20px;
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #messages {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      padding: 12px 15px;
+      border-radius: 14px;
+      margin-bottom: 10px;
+      max-width: 80%;
+      line-height: 1.5;
+    }
+
+    .bot {
+      background: #222b44;
+      margin-right: auto;
+    }
+
+    .user {
+      background: #2563eb;
+      margin-left: auto;
+    }
+
+    .input-area {
+      display: flex;
+      gap: 10px;
+    }
+
+    input {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    button {
+      border: none;
+      border-radius: 12px;
+      padding: 0 20px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <div class="header">
+      <h1>🛡️ CyberSafe</h1>
+      <p>Seu assistente de segurança digital</p>
+    </div>
+
+    <div class="chat">
+
+      <div id="messages">
+        <div class="message bot">
+          Olá! Eu sou o CyberSafe. Como posso ajudar você com segurança digital?
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Digite sua pergunta..."
+        >
+
+        <button onclick="sendMessage()">
+          Enviar
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
